@@ -1,32 +1,26 @@
-<?php 
+<?php
 
-class Employe {
-    public $nom ;
+class Employe
+{
+    public $nom;
     public $prenom;
     public $age;
-    public function presentation($nom,$prenom,$age){
-        var_dump("Bonjour, je suis $prenom $nom et j ai $age ans ");
-
+    public function presentation()
+    {
+        var_dump("Bonjour, je suis $this->prenom $this->nom et j ai $this->age ans ");
+    }
 }
 
-}
 
-$nom ="Chamla";
-$prenom = "Lior";
-$age =32;
+$employe1 = new Employe();
+$employe1->prenom = "Lior";
+$employe1->nom = "Chamlar";
+$employe1->age = 32;
 
+$employe2 = new Employe();
+$employe2->prenom = "Magalie";
+$employe2->nom = "Pernin";
+$employe2->age = 32;
 
-$nom2= "Pernin";
-$prenom2="Magalie";
-$age2=32;
-
-function presentation($nom,$prenom,$age ){
-var_dump("Bonjour, je suis $prenom $nom et j ai $age ans ");
-
-}
-presentation($nom, $prenom, $age);
-presentation($nom2, $prenom2, $age2);
-
-
-
-?>
+$employe1->presentation();
+$employe2->presentation();
